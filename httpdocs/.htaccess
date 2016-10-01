@@ -1,0 +1,13 @@
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !\.(jpg|png|gif|ico|js|css|html|txt|avi|mp3|map|otf|ttf|woff|woff2)$
+RewriteCond %{REQUEST_URI} !^\/index\.php
+RewriteRule ^(.*)$ /index.php [L]
+AddDefaultCharset utf-8
+AddCharset utf-8 *
+
+<IfModule mod_rewrite.c>
+    RewriteEngine on
+    RewriteBase /
+    RewriteCond %{HTTP:Authorization} ^Basic.*
+    RewriteRule (.*) index.php?authorization=%{HTTP:Authorization} [QSA,L]
+</IfModule>

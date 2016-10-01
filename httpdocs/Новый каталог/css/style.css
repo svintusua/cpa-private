@@ -1,0 +1,398 @@
+	/*Цвета:
+		желный - #fffed4 (255,254,212)
+		кнопка - #475052
+		текст - #7e857b
+		заглушка - #6c7174 (108,113,116)
+	*/
+@font-face {
+	font-family: "GothaProLig";
+	src: url("../fonts/GothaProLig.otf");
+	/*src: url("../fonts/Roboto-Thin.ttf") format("truetype");*/
+}
+@font-face {
+	font-family: "GothaProLigIta";
+	src: url("../fonts/GothaProLigIta.otf");
+	/*src: url("../fonts/Roboto-LightItalic.ttf") format("truetype");*/
+}
+@font-face {
+	font-family: "GothaProLig";
+	src: url("../fonts/GothaProLig.otf");
+	/*src: url("../fonts/Roboto-Light.ttf") format("truetype");*/
+}
+@font-face {
+	font-family: "GothaProReg";	
+	src: url("../fonts/GothaProReg.otf");
+	/*src: url("../fonts/Roboto-Regular.ttf") format("truetype");*/
+}
+@font-face {
+	font-family: "GothaProMed";
+	src: url("../fonts/GothaProMed.otf");
+	/*src: url("../fonts/Roboto-Medium.ttf") format("truetype");*/
+}
+@font-face {
+	font-family: "GothaProBol";
+	src: url("../fonts/GothaProBol.otf");
+	/*src: url("../fonts/Roboto-Bold.ttf") format("truetype");*/
+}
+@keyframes prem
+{
+0%   {
+opacity: 0;
+	}
+100%{
+opacity: 1;
+	}
+}
+
+@-moz-keyframes prem /* Firefox */
+{
+0%   {
+opacity: 0;
+	}
+100%{
+opacity: 1;
+	}
+}
+
+@-webkit-keyframes prem /* Safari и Chrome */
+{
+0%   {
+opacity: 0;
+	}
+100%{
+opacity: 1;
+	}
+}
+* {
+	margin: 0;
+	padding: 0;
+	outline: none;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-webkit-appearance: none;
+}
+html,body {
+	width: 100%;
+	min-width: 300px;
+	height: 100%;
+	font-family: GothaProLig;	
+	color:#000;
+	font-size: 0;
+}
+#slide1{
+	width: 100%;
+	position: relative;	
+	height: 100%;
+	min-height: 650px;
+}
+#slide1 .left, #slide1 .right{
+	background-size: cover;
+	width:50%;
+	min-width:500px;	
+	display: inline-block;
+	vertical-align: top;
+	font-size: 15px;
+	height: 100%;
+}
+#slide1 .left{
+	background: url(../img/left_bg.jpg) no-repeat;
+	background-position: center right;
+	background-size: cover;
+}
+#slide1 .right .top{
+	background: rgba(0, 0, 0, 0) url("../img/right_bg.jpg") no-repeat scroll center center / cover ;
+    color: #fff;
+    min-height: 50%;
+    padding: 10px 40px 10px;
+    text-align: center;
+}
+#slide1 .right .bottom{
+	background: #fffed4;
+	background-position: center;
+	background-position: cover;
+    color: #7e857b;
+    height: 50%;
+    padding: 10px 40px 0;
+    text-align: center;
+}
+
+#slide1 .right .top p {
+    font-size: calc(100% * 1.12);
+    margin: 0 10px;
+    text-align: left;
+	text-indent: 20px;
+}
+
+#slide1 .right .top::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+#slide1 .right .top .paragraf {
+    display: inline-block;
+    width: 100%;
+    vertical-align: middle;
+	margin-top: 6%;
+}
+#slide1 .right .top p:first-child{
+	color: #fff;
+	margin-bottom: 15px;
+}
+#slide1 .right .top p:last-child{
+	color: #fffed4;
+}
+#slide1 .left::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    outline: 1px none red;
+    vertical-align: middle;
+}
+
+#slide1 .logo {
+    border: 3px solid #fffed4;
+    height: 90px;
+    margin: 10px auto auto;
+    text-align: center;
+    width: 410px;
+}
+#slide1 .logo::after{
+	content: "";
+	height: 100%;
+	display: inline-block;
+	vertical-align: middle;
+	
+}
+#slide1 .logo_text{
+	display: inline-block;
+	vertical-align: middle;
+	
+}
+#slide1 .logo  .logo_text h1 {
+    color: #fff;
+    font-family: GothaProMed;
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+#slide1 .logo .logo_text > p {
+    color: #fff;
+    font-size: 16px;
+}
+nav{
+	position: fixed;
+	width: 10px;
+	top: 20%;
+	left: 10px;
+}
+nav ul li{
+	list-style: none;
+	cursor: pointer;	
+}
+
+
+#plushki {
+    display: inline-block;
+    margin-top: 15%;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.prem {
+    background: rgba(255,254,212,0.2);
+    border-radius: 50%;
+    display: inline-block;
+    height: 150px;
+    margin-right: 20px;
+    vertical-align: top;
+    width: 150px;
+	color: #fffed4;
+	opacity: 0;
+	transition: opacity 0.8s; 
+	-o-transition: opacity 0.8s;
+	-ms-transition: opacity 0.8s;
+	-webkit-transition: opacity 0.8s;
+	-moz-transition: opacity 0.8s;
+}
+.prem:nth-child(1),.prem:nth-child(2) {
+	margin-bottom: 20px;
+}
+
+.prem::after {
+	content: "";
+	height: 100%;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.prem  h2 {
+    display: inline-block;
+    vertical-align: middle;
+	height: 100%;
+}
+
+.prem span {
+    display: inline-block;
+    height: 50%;
+    width: 100%;
+}
+.prem span:first-child::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    vertical-align: bottom;
+}
+.prem span:first-child {
+    font-size: 40px;
+}
+
+.center {
+    display: inline-block;
+    height: 650px;
+    vertical-align: middle;
+    width: 99%;
+	text-align: center;
+	position: relative;
+	margin: auto;
+}
+
+.prava {
+    bottom: 0;
+    color: #fff;
+    font-size: 12px;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+	bottom: 10px;
+}
+
+.left .center .contancts {
+    margin: 5% auto auto;
+    text-align: center;
+    width: 100%;
+}
+
+.contancts > span {
+    color: #fff;
+    display: inline-block;
+    font-family: GothaProMed;
+    font-size: 25px;
+    width: 100%;
+}
+.contancts > span i {
+    display: inline-block!important;
+    font-size: 35px !important;
+    vertical-align: middle;
+}
+
+.form {
+    margin-top: 5%;
+    text-align: justify;
+    width: 100%;
+}
+
+#one > input {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    border: 2px solid #475052;
+    box-shadow: none;
+    font-size: 16px;
+    margin-bottom: 15px;
+    padding: 15px;
+    width: 32%;
+	font-family: GothaProBol;
+	color: #7e857b;
+}
+input::-webkit-placeholder{
+	color: #7e857b;
+}
+input::-moz-placeholder{
+	color: #7e857b;
+}
+textarea {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    border: 2px solid #475052;
+    font-family: GothaProBol;
+    height: 100px;
+    margin-bottom: 15px;
+    padding: 15px;
+	color: #7e857b;
+    width: 100%;
+	resize: none;
+	position: relative;
+}
+
+#one > input[type="submit"] {
+    background: #475052 none repeat scroll 0 0;
+    border: 2px solid #475052;
+    color: #fff;
+    display: block;
+    font-family: GothaProMed;
+    font-size: 20px;
+    height: 50px;
+    letter-spacing: 3px;
+    padding: 0;
+    text-transform: uppercase;
+    width: 100%;
+	margin: none;
+	transition: background 0.5s;
+	-ms-transition: background 0.5s;
+	-o-transition: background 0.5s;
+	-webkit-transition: background 0.5s;
+	-moz-transition: background 0.5s;
+	cursor: pointer;
+}
+#one > input[type="submit"]:hover {
+	background: #7e857b;
+}
+@media screen and (max-width: 1000px) {
+  #slide1 .left, #slide1 .right{
+	width:100%;
+}
+}
+@media only screen and (max-device-width: 500px) {
+	.center {
+		height: 85%;
+	}
+	#slide1 .logo {
+		height: 130px;
+		width: 550px;
+	}
+	#slide1 .logo .logo_text h1 {
+		font-size: 55px;
+	}
+	#slide1 .logo .logo_text > p {
+		font-size: 25px;
+	}
+	#plushki {
+		margin-top: 10%;
+	}
+	.prem {
+		margin-right: 35px;
+		width: 290px;
+		height: 290px;
+	}
+	.prem:nth-child(1), .prem:nth-child(2) {
+		margin-bottom: 35px;
+	}
+	.prem span:first-child {
+		font-size: 105px;
+	}
+	.prem span:last-child {
+		font-size: 40px;
+	}
+	.left .center .contancts {
+		margin: 10% auto auto;
+	}
+	.contancts > span {
+		font-size: 40px;
+	}
+	.contancts > span i {
+		font-size: 60px !important;
+	}
+	.prava {
+		font-size: 25px;
+	}
+}
