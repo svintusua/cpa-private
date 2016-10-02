@@ -1,0 +1,7 @@
+AuthType Basic
+AuthName "/www/cpa-private.biz/webstat"
+AuthUserFile /var/www/user51577/data/etc/68816214.passwd
+DirectoryIndex index.html
+<Limit GET POST>
+	require valid-user
+</Limit>

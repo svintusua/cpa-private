@@ -1,0 +1,67 @@
+body{
+    margin: 0;
+}
+#allweblart input {
+    width: 100%;
+}
+.menu{
+   background-color: #0D82BE;
+    border-right: 1px solid #000000;
+    box-shadow: 1px 0 5px 0;
+    float: left;
+    margin: 0;
+    padding: 15px;
+    position: relative;
+    width: 20%;
+    height: 100%;
+}
+.menu a{
+    color: #FFFFFF;
+    font-size: 18px;
+    font-weight: bolder;
+    text-decoration: none;
+}
+.block{
+    float: left;
+    padding: 25px 0 0 12px;
+    width: 76%;
+}
+footer{
+    background-color: #424242;
+    color: #FFFFFF;
+    float: left;
+    padding: 6px;
+    width: 99%;
+}
+.blockred{
+     background-color: #F3F3F3;
+    border: 1px solid #585858;
+    border-radius: 5px;
+    box-shadow: 0 0 6px inset;
+    margin-bottom: 10px;
+    padding: 10px 0 0 10px;
+    position: relative;
+}
+.tablepoint{
+    
+}
+#tablecreate{
+    
+}
+.little_block {
+    display: inline-block;
+    vertical-align: top;
+    width: 300px;
+}
+
+.little_block input, .little_block select {
+    display: block;
+    font-size: 15px;
+    margin-bottom: 10px;
+    padding: 5px;
+    width: 90%;
+}
+.little_block input[type="checkbox"]{
+	display: inline-block;
+	width: 10%;
+}

@@ -1,0 +1,29 @@
+.tooltipster-kma {
+    border-radius: 0;
+    border: 2px solid #000;
+    background: #29333C;
+    color: #fff;
+}
+.tooltipster-kma .tooltipster-content {
+    font-size: 14px;
+    line-height: 16px;
+    padding: 8px 10px;
+}
+
+.tooltipster-default {
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+}
+
+.tooltipster-icon {
+    background: transparent;
+    margin-left: 2px;
+    color: #0078C9;
+    cursor: help;
+    font-size: 20px;
+}
+
+.tooltipster-icon:hover {
+    color: #1f70a6;
+}

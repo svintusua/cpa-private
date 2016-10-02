@@ -1,0 +1,1 @@
+<p><?=$this->vars['text']?></p>

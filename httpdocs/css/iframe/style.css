@@ -1,0 +1,76 @@
+.frame {
+	margin: 0 auto;
+	min-width: 180px;
+	min-height: 200px;
+	max-width: 580px;
+	width: 70%;
+	height: 100%;
+	background-color: rgba(143, 193, 85, 0.19);
+	padding: 10px;
+}
+
+.name>label, .phone>label {
+	display: block;
+	font-size: 20px;
+}
+
+.name {
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+
+#name, #phone {
+	border: 1px solid #000;
+	border-radius: 5px;
+	height: 25px;
+	box-shadow: 2px 1px 6px -1px rgb(76, 78, 73);
+}
+
+#name {
+	width: 80%;
+}
+
+#phone {
+	width: 150px;
+}
+
+.phone {
+	margin-bottom: 50px;
+}
+
+.left_price, .right_price {
+	display: inline-block;
+}
+
+.right_price {
+	float: right;
+}
+
+.price {
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.summ {
+	font-size: 18px;
+}
+
+.submit {
+	text-align: center;
+}
+
+.submit>input {
+	background-color: #e05151;
+	border: 1px solid #e05151;
+	border-radius: 3px;
+	min-width: 80px;
+	width: 20%;
+	height: 25px;
+	color: white;
+}
+
+.submit>input:hover {
+	box-shadow: inset 1px 1px 10px -3px #5c3523, 
+				inset -1px -1px 10px -3px #5c3523;
+	cursor: pointer;
+}

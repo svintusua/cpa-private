@@ -1,0 +1,46 @@
+.left-box .left-check-categorys ul {
+    display: none!important;
+}
+
+.left-box .left-check-categorys ul.category_group_opened {
+    display: block!important;
+}
+
+.fa-div-button {
+    display: inline-block;
+    color: #000000;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.social-auth-button {
+    display: inline-block;
+    border: none;
+    height: 26px;
+    width: 26px;
+    margin: 4px 2px;
+}
+
+.vk-auth-button {
+    background: url(../img/social/icon-auth-vk.png) repeat-y center 0;
+}
+
+.vk-auth-button:hover {
+    background: url(../img/social/icon-auth-vk.png) repeat-y center 26px;
+}
+
+.fb-auth-button {
+    background: url(../img/social/icon-auth-fb.png) repeat-y center 0;
+}
+
+.fb-auth-button:hover {
+    background: url(../img/social/icon-auth-fb.png) repeat-y center 26px;
+}
+
+.gp-auth-button {
+    background: url(../img/social/icon-auth-gp.png) repeat-y center 0;
+}
+
+.gp-auth-button:hover {
+    background: url(../img/social/icon-auth-gp.png) repeat-y center 26px;
+}

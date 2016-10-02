@@ -1,0 +1,169 @@
+<!DOCTYPE html>  
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+	
+</head>
+<body>
+	<div id="promo">
+		<div id="logo">
+			<img src="./img/logo.jpg">
+		</div>
+		<div id="goods">
+		<!-- группа товаров 1 -->
+			<div id="slide1" onmouseenter="stoped()" onmouseleave="activ()">
+				<div class="list">
+					<div class="product">
+						<div class="img">
+						</div>
+						<div class="description">
+							<span class="name">BaByliss PRO</span>
+							<span class="price">1200 руб.</span>
+							<a href="" class="btn_small"><span>купить</span></a>
+						</div>
+					</div>
+					<div class="product">
+						<div class="img">
+						</div>
+						<div class="description">
+							<span class="name">BaByliss PRO</span>
+							<span class="price">1200 руб.</span>
+							<a href="" class="btn_small"><span>купить</span></a>
+						</div>
+					</div>
+					<div class="product">
+						<div class="img">
+						</div>
+						<div class="description">
+							<span class="name">BaByliss PRO</span>
+							<span class="price">1200 руб.</span>
+							<a href="" class="btn_small"><span>купить</span></a>
+						</div>
+					</div>
+					<div class="product">
+						<div class="img">
+						</div>
+						<div class="description">
+							<span class="name">BaByliss PRO</span>
+							<span class="price">1200 руб.</span>
+							<a href="" class="btn_small"><span>купить</span></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<a href="" class="btn"><span>купить</span></a>
+	</div>
+	<script>
+		a =1;
+		stop = 0;
+		sliders(1);
+		function hide(){	
+				product[0].style.opacity = 0;
+				product[1].style.opacity = 0;
+				product[2].style.opacity = 0;
+				product[3].style.opacity = 0;
+		}
+		function sliders(a){	
+			img = document.getElementsByClassName('img');
+			price = document.getElementsByClassName('price');
+			name = document.getElementsByClassName('name');
+			product = document.getElementsByClassName('product');
+		
+			for_img1 = new Array('t1','t1','t1','t1');
+			for_img2 = new Array('t2','t2','t2','t2');
+			for_img3 = new Array('t3','t3','t2','t3');
+			
+			for_name1 = new Array('BaByliss PRO','BaByliss PRO','BaByliss PRO','BaByliss PRO');
+			for_name2 = new Array('Fragrance','Fragrance','Fragrance','Fragrance');
+			for_name3 = new Array('Cream','Cream','Cream','Cream');
+			
+			for_price1 = new Array('1200','1200','1200','1200');
+			for_price2 = new Array('2200','2200','2200','2200');
+			for_price3 = new Array('3200','3200','3200','3200');
+			
+			number = document.getElementsByClassName('product').length;
+			
+			if(stop!=1){
+				if(a>3){
+					a=1;
+				}
+				switch(a){
+					case 1:												
+						for(i=0;i<number;i++){
+							img[i].style.backgroundImage='url("./img/' + for_img1[i] + '.png")';
+							price[i].innerHTML=for_price1[i] + ' руб.';
+							name[i].innerHTML=for_name1[i];							
+						}						
+					
+						product[0].style.opacity = 1;
+						setTimeout("product[1].style.opacity = 1",800);
+						setTimeout("product[2].style.opacity = 1",1600);
+						setTimeout("product[3].style.opacity = 1",2400);
+						setTimeout(function() {
+							hide();
+						}, 3900);
+						setTimeout(function() {
+							sliders(a);
+						}, 5000);
+					break;
+					case 2:
+						for(i=0;i<number;i++){							
+							img[i].style.backgroundImage='url("./img/' + for_img2[i] + '.png")';
+							price[i].innerHTML=for_price2[i] + ' руб.';
+							name[i].innerHTML=for_name2[i];	
+							product[i].style.left = "-250px";							
+							product[i].style.opacity = 1;
+						}
+						product[0].style.left = 0;
+						setTimeout("product[1].style.left = 0",800);
+						setTimeout("product[2].style.left = 0",1600);
+						setTimeout("product[3].style.left = 0",2400);
+						setTimeout(function() {
+							hide();
+						}, 3900);
+						setTimeout(function() {
+							//sliders(a);
+						}, 5000);
+					break;
+					case 3:
+						for(i=0;i<number;i++){							
+							img[i].style.backgroundImage='url("./img/' + for_img3[i] + '.png")';
+							price[i].innerHTML=for_price3[i] + ' руб.';
+							name[i].innerHTML=for_name3[i];	
+							product[i].style.left = "-250px";							
+							product[i].style.opacity = 1;
+						}
+						product[0].style.left = 0;
+						setTimeout("product[1].style.left = 0",800);
+						setTimeout("product[2].style.left = 0",1600);
+						setTimeout("product[3].style.left = 0",2400);
+						setTimeout(function() {
+							hide();
+						}, 3900);
+						setTimeout(function() {
+							//sliders(a);
+						}, 5000);
+					break;
+				}
+				a++;
+				setTimeout(function() {
+				   sliders(a);
+				}, 5000);
+			}
+		}
+		function stoped(){	
+			console.log('stop - ');
+
+			stop = 1;			
+		}
+		function activ(){	
+		console.log('activ - ');
+			stop = 0;
+			//sliders(a);
+		}
+
+	</script>
+</body>
+</html>

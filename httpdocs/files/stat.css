@@ -1,0 +1,32 @@
+.custom-combobox {
+    position: relative;
+    display: inline-block !important;
+}
+.custom-combobox-toggle {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin-left: -1px;
+    padding: 0;
+    /* support: IE7 */
+    *height: 1.7em;
+    *top: 0.1em;
+    right: -32px;
+    height: 24px;
+}
+.custom-combobox-input {
+    margin: 0;
+    padding: 0.3em;
+    width: 160px;
+    color: #000000;
+}
+
+/* Класс для статусов кнопки обновить */
+.stat-refresh-button {
+    background: url('../../img/refresh.png') no-repeat;
+    cursor:pointer;
+    float:right;
+    margin:17px 0 0 0;
+    height: 22px;
+    width: 22px;
+}

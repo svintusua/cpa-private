@@ -1,0 +1,388 @@
+html,body {
+	font-family: GothaProLig;	
+	color:#3f2f18;
+	font-size: 0;
+}
+* {
+	margin: 0;
+	padding: 0;
+	outline: none;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-webkit-appearance: none;
+}
+/* слайды*/
+@keyframes slide1_all
+{
+	0%   {
+		opacity: 1;
+		left: 0;
+	}
+	22%{
+		opacity: 1;
+		left: 0;
+	}
+	23%{
+		opacity:0 ;
+		left: -400px;
+	}
+	85%{
+		opacity:0 ;
+		left: -400px;
+	}
+	100%{
+		opacity:1 ;
+		left: 0;
+	}
+}
+
+@-moz-keyframes slide1_all 
+{
+	0%   {
+		opacity: 1;
+		left: 0;
+	}
+	22%{
+		opacity: 1;
+		left: 0;
+	}
+	23%{
+		opacity:0 ;
+		left: -400px;
+	}
+	85%{
+		opacity:0 ;
+		left: -400px;
+	}
+	100%{
+		opacity:1 ;
+		left: 0;
+	}
+}
+
+@-webkit-keyframes slide1_all 
+{
+	0%   {
+		opacity: 1;
+		left: 0;
+	}
+	22%{
+		opacity: 1;
+		left: 0;
+	}
+	23%{
+		opacity:0 ;
+		left: -400px;
+	}
+	85%{
+		opacity:0 ;
+		left: -400px;
+	}
+	100%{
+		opacity:1 ;
+		left: 0;
+	}
+}
+/* товары слайда 1*/
+@keyframes slide1
+{
+	0%   {
+		opacity: 0;
+	}
+	10% {
+		opacity: 1;
+	}
+	95% {
+		opacity: 1;
+	}
+	100%{
+		opacity:0 ;
+	}
+}
+
+@-moz-keyframes slide1 
+{
+	0%   {
+		opacity: 0;
+	}
+	10% {
+		opacity: 1;
+	}
+	95% {
+		opacity: 1;
+	}
+	100%{
+		opacity:0 ;
+	}
+}
+
+@-webkit-keyframes slide1 
+{
+	0%   {
+		opacity: 0;
+	}
+	10% {
+		opacity: 1;
+	}
+	95% {
+		opacity: 1;
+	}
+	100%{
+		opacity:0 ;
+	}
+}
+/* товары слайда 2*/
+@keyframes slide2
+{
+	10%   {
+		left: 0;
+	}
+	95%   {
+		left: 0;
+	}	
+	100%{
+		left: -250px;
+	}
+}
+
+@-moz-keyframes slide2 
+{
+	10%   {
+		left: 0;
+	}
+	95%   {
+		left: 0;
+	}	
+	100%{
+		left: -250px;
+	}
+}
+
+@-webkit-keyframes slide2 
+{
+	10%   {
+		left: 0;
+	}
+	95%   {
+		left: 0;
+	}	
+	100%{
+		left: -250px;
+	}
+}
+/* товары слайда 3*/
+@keyframes slide3
+{
+	10%   {
+		left: 0;
+		top: 0;
+		transform: rotate(0deg);
+	}
+	100%   {
+		left: 0;
+		top: 0;
+		transform: rotate(0deg);
+	}	
+
+}
+
+@-moz-keyframes slide3 
+{
+	10%   {
+		left: 0;
+		top: 0;
+		transform: rotate(0deg);
+	}
+	100%   {
+		left: 0;
+		top: 0;
+		transform: rotate(0deg);
+	}	
+}
+
+@-webkit-keyframes slide3 
+{
+	10%   {
+		left: 0;
+		top: 0;
+		transform: rotate(0deg);
+	}
+	100%   {
+		left: 0;
+		top: 0;
+		transform: rotate(0deg);
+	}	
+}
+
+
+#promo {
+	background: rgba(0, 0, 0, 0) url("../img/bg.jpg") repeat scroll 0 0;
+	height: 400px;
+	overflow: hidden;
+	width: 240px;
+}
+
+#logo{
+	height: 70px;
+	width: 100%;
+	text-align: center;
+}
+#logo::after,.btn::after, .btn_small::after, #slide1::after, #slide2::after, #slide3::after{
+	content: "";
+	height: 100%;
+	display: inline-block;
+	vertical-align: middle;
+}
+#logo img{
+	width: 80%;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.btn {
+	background: #fff none repeat scroll 0 0;
+	border-bottom: 2px solid #edb8c8;
+	color: #402e17;
+	display: block;
+	font-size: 25px;
+	font-weight: bold;
+	height: 45px;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	width: 100%;
+	transition: background 0.5s, color 0.2s;
+	-o-transition: background 0.5s, color 0.2s;
+	-ms-transition: background 0.5s, color 0.2s;
+	-webkit-transition: background 0.5s, color 0.2s;
+	-moz-transition: background 0.5s, color 0.2s;
+}
+.btn span, .product .description .btn_small span, .list{
+	display: inline-block;
+	vertical-align: middle;
+}
+.btn:hover{
+	color: #fff;
+	background: #422e18;
+}
+#goods {
+	height: 285px;
+	margin: auto;
+	overflow: hidden;
+	position: relative;
+	width: 230px;
+}
+#slide1, #slide2,#slide3 {
+	height: 100%;
+	position: absolute;
+	width: 100%;
+	padding: 4px;
+	text-align: justify;
+}
+#slide2,#slide3 {
+	left: -400px;
+}
+
+.product {
+	background: #fff none repeat scroll 0 0;
+	border-radius: 10px;
+	box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+	cursor: pointer;
+	display: inline-block;
+	height: 100px;
+	margin-bottom: 10px;
+	width: 45%;
+	overflow: hidden;
+	position: relative;
+	vertical-align: top;
+	opacity: 0;
+	transition: left 1s, top 1s, transform 1s, opacity 1s;
+	-o-transition: left 1s, top 1s, transform 1s, opacity 1s;
+	-ms-transition: left 1s, top 1s, transform 1s, opacity 1s;
+	-webkit-transition: left 1s, top 1s, transform 1s, opacity 1s;
+	-moz-transition: left 1s, top 1s, transform 1s, opacity 1s;
+}
+
+.product .img {
+	background: rgba(0, 0, 0, 0) url("../img/t1.png") no-repeat scroll center 2px / contain ;
+	height: 70px;
+	width: 100%;
+}
+#slide2 .product .img {
+	background-image: url("../img/t2.png");
+}
+#slide3 .product .img {
+	background-image: url("../img/t3.png");
+}
+.product .description {
+	bottom: -50px;
+	position: absolute;
+	text-align: center;
+	width: 100%;
+	background: rgba(255, 255, 255, 0.8) none repeat scroll 0 0;
+	transition: background 0.5s, bottom 0.7s;
+	-o-transition: background 0.5s, bottom 0.7s;
+	-ms-transition: background 0.5s, bottom 0.7s;
+	-webkit-transition: background 0.5s, bottom 0.7s;
+	-moz-transition: background 0.5s, bottom 0.7s;
+}
+.product .description .name {
+	color: #d2a6b3;
+	display: inline-block;
+	font-size: 14px;
+	height: 20px;
+	width: 100%;
+}
+.product .description .price {
+	display: inline-block;
+	font-size: 15px;
+	height: 20px;
+	width: 100%;
+}
+
+.product .description .btn_small {
+	background: #edb8c8 none repeat scroll 0 0;
+	color: #fff;
+	display: block;
+	font-size: 18px;
+	font-weight: bold;
+	height: 30px;
+	letter-spacing: 1px;
+	text-decoration: none;
+	text-transform: uppercase;
+	width: 100%;
+	cursor: pointer;
+	transition: background 0.5s, color 0.2s;
+	-o-transition: background 0.5s, color 0.2s;
+	-ms-transition: background 0.5s, color 0.2s;
+	-webkit-transition: background 0.5s, color 0.2s;
+	-moz-transition: background 0.5s, color 0.2s;
+}
+.product .description .btn_small:hover{
+	color: #d2a6b3;
+	background: #fff;
+}
+.list {
+	width: 100%;
+}
+.list::after {
+	content: "";
+	display: inline-block;
+	width: 100%;
+}
+.product:hover .description{
+	bottom: 0;
+}
+
+
+
+#slide3 .product {
+	left: -250px;
+	top: -250px;
+	transform: rotate(-90deg);
+	-moz-transform: rotate(-90deg);
+	-webkit-transform: rotate(-90deg);
+	-o-transform: rotate(-90deg);
+	-ms-transform: rotate(-90deg);
+}
