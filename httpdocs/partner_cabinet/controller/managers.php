@@ -49,37 +49,37 @@ class C_Managers extends Controller {
 			if(isset($_POST['surname']) && !empty($_POST['surname'])){
 				$filds['surname'] = $_POST['surname'];
 			}else{
-				$errors[] = 'отсутсвует фамилия';
+				$errors[] = 'отсутствует фамилия';
 			}
 			
 			if(isset($_POST['lastname']) && !empty($_POST['lastname'])){
 				$filds['lastname'] = $_POST['lastname'];
 			}else{
-				$errors[] = 'отсутсвует отчество';
+				$errors[] = 'отсутствует отчество';
 			}
 			
 			if(isset($_POST['name']) && !empty($_POST['name'])){
 				$filds['name'] = $_POST['name'];
 			}else{
-				$errors[] = 'отсутсвует имя';
+				$errors[] = 'отсутствует имя';
 			}
 			
 			if(isset($_POST['about']) && !empty($_POST['about'])){
 				$filds['about'] = $_POST['about'];
 			}else{
-				$errors[] = 'отсутсвует описание менеджера';
+				$errors[] = 'отсутствует описание менеджера';
 			}
 			
 			if(isset($_POST['tel']) && !empty($_POST['tel']) && filter_var($_POST['tel'], FILTER_VALIDATE_INT)){
 				$filds['phone'] = $_POST['tel'];
 			}else{
-				$errors[] = 'отсутсвует имя';
+				$errors[] = 'отсутствует имя';
 			}
 			
 			if(isset($_POST['partner_id']) && !empty($_POST['partner_id']) && filter_var($_POST['partner_id'], FILTER_VALIDATE_INT)){
 				$partner_id = $_POST['partner_id'];
 			}else{
-				$errors[] = 'отсутсвует уникальный ID партнера';
+				$errors[] = 'отсутствует уникальный ID партнера';
 			}
 			if($errors){
 				break;
